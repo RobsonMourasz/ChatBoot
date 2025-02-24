@@ -1,0 +1,6 @@
+<?php 
+    define("SERVIDOR","LOCALHOST");
+    define("USER","root");
+    define("PASSWORD","Qwe1234241+-+");
+    define("BASE","chatboot");
+    define("PORTA","3310");
