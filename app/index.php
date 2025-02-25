@@ -22,20 +22,79 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
         <div class="content-mensagens">
             <div class="menu-mensagens">
                 <div class="icons-mensagens">
-                    <i class="bi bi-messenger"></i>
+                    <a href="#" class="icon-link"><i class="bi bi-messenger"></i></a>
                 </div>
                 <div class="icons-mensagens">
-                    <i class="bi bi-pin-angle"></i>
+                    <a href="#" class="icon-link"><i class="bi bi-pin-angle"></i></a>
                 </div>
                 <div class="icons-mensagens">
-                    <i class="bi bi-person-circle"></i>
+                    <a href="#" class="icon-link"><i class="bi bi-person-circle"></i></a>
                 </div>
-                <div class="icons-mensagens-end">
-                    <i class="bi bi-box-arrow-right"></i>
+                <div class="icons-mensagens">
+                    <a href="php/logoff.php" class="icon-link"><i class="bi bi-box-arrow-right"></i></a>
                 </div>
             </div>
 
             <div class="tela-novas-mensagens">
+                <div class="title">
+                    <h1>Conversas</h1>
+                </div>
+                <div class="pesquisa-mensagens">
+                    <div class="group-input">
+                        <form action="" method="post">
+                            <input type="text" placeholder="Digite a busca...">
+                        </form>
+                    </div>
+                </div>
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+
+                <div class="tela-mensagens"> <!--MENSAGEM 2 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/perfil-2.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Ingrid Silva</small>
+                            <p>Olá tudo bem ?</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+
+                </div> <!-- END MENSAGEM 2 MODELO -->
+
+                <div class="tela-mensagens"> <!--MENSAGEM 3 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Perfil-3.jpg" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Rainha Elizabeth</small>
+                            <p>Meus parabéns você novo rei </p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+
+                </div> <!-- END MENSAGEM 3 MODELO -->
 
             </div>
 
@@ -45,6 +104,17 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script>
+            /* Verifificar se está na pagina  */
+            const verificar = () => {
+                if (document.visibilityState === "visible") {
+                    console.log("usuario ativo")
+                } else {
+                    console.log("usuario não ativo")
+                }
+            }
+            document.addEventListener("visibilitychange", verificar)
+        </script>
     </body>
 
     </html>
