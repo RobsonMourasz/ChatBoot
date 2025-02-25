@@ -96,10 +96,124 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
 
                 </div> <!-- END MENSAGEM 3 MODELO -->
 
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
+                    <div class="contato">
+                        <div class="contato-img">
+                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
+                        </div>
+                        <div class="contato-descricao">
+                            <small>Robson Moura</small>
+                            <p>Fala manolo</p>
+                        </div>
+                        <div class="contato-inf">
+                            <span class="title">12:00</span>
+                            <span class="visivel">Online</span>
+                        </div>
+                    </div>
+                </div> <!-- END MENSAGEM 1 MODELO -->
+
             </div>
 
             <div class="mensagens-exibidas">
 
+                <div class="page-active opacity-100"></div>
+
+                <div class="header">
+                    <span id="nome">Robson Moura</span>
+                    <span id="email">robsonic10@gmail.com</span>
+                    <span id="ultimo-acesso">Visto por ultimo: 25-02-2025 18:15</span>
+                </div>
+                <div class="body">
+
+                </div>
+                <div class="footer">
+                    <div class="group-input">
+                        <form action="" method="post">
+                            <div class="container-input">
+                                <input type="text" placeholder="Digite a mensagem...">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -115,6 +229,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
             }
             document.addEventListener("visibilitychange", verificar)
         </script>
+        <script src="js/acoes.index.js"></script>
     </body>
 
     </html>

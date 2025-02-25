@@ -40,6 +40,7 @@
 .tela-novas-mensagens{
     display: flex;
     flex-direction: column;
+    overflow: hidden scroll;
     width: calc(100% - 10% - 60%);
     height: 100vh;
     background: linear-gradient(#202c33, #2c3c46);
@@ -101,6 +102,13 @@
 .tela-mensagens{
     width: 100%;
     border-bottom: 1px solid #3f5664;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .5s ease;
+}
+
+.tela-mensagens:hover{
+    background-color: #2d3e47;
 }
 
 .tela-mensagens .contato{
@@ -164,12 +172,76 @@
 }
 
 .mensagens-exibidas{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 30%);
+    height: 100vh;
+}
+
+.mensagens-exibidas .page-active{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #202c33;
+    opacity: 0;
+    transition: 1s ease;
+    z-index: 10000;
+}
+
+.mensagens-exibidas .header{
+    width: 100%;
+    height: 10%;
+    background-color: #202c33;
+    color: #949494;
+    display: flex;
+    flex-direction: column;
+    font-size: .8em;
+}
+
+.mensagens-exibidas .header span{
+    margin-left: 2em;
+}
+
+.mensagens-exibidas .body{
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    overflow: hidden scroll;
+}
+
+.mensagens-exibidas .footer{
+    width: 100%;
+    height: 10%;
+    background-color: #202c33;
+}
+
+.mensagens-exibidas .footer .group-input form,
+.mensagens-exibidas .footer .group-input form .container-input{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100% - 30%);
-    height: 100vh;
-    border: 1px solid #ccc;
+}
+
+.mensagens-exibidas .footer .group-input form .container-input{
+    margin-top: 1em;
+    position: relative;
+}
+
+.mensagens-exibidas .footer .group-input form .container-input::after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icons/send-fill.svg") no-repeat;
+    background-size: 20px;
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 
