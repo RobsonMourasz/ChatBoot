@@ -15,3 +15,14 @@
         });
     });
 })();
+
+async function CarregarConversasUsuarios() {
+    const idLogado = document.getElementById("id");
+    const pesq_conversas = await fetch(`../php/pesqConversas.php?id=${idLogado}`);
+    if (pesq_conversas.ok){
+        const retorno_conversa = await pesq_conversas.json();
+        if (retorno_conversa.Retorno === "OK"){
+            
+        }
+    }
+}

@@ -13,8 +13,21 @@
                 if (!isset($_SESSION)) {
                     session_start();
                 }
-                $_SESSION['sessao'] = $verificar_LOGIN['usuario'];
-                header("Location: ../index.php");
+                try {
+                    $idLogado = $verificar_LOGIN['id_login'];
+                    $_SESSION['sessao'] = $verificar_LOGIN['usuario'];
+                    $_SESSION['nomeUsuario'] = $verificar_LOGIN['nome'];
+                    $_SESSION['idUsuario'] = $idLogado;
+                    $insertOnline = $conexao->query("INSERT INTO usuarios_ativos (id_usuario, ultimo_acesso, situacao) VALUES ($idLogado, now(), 'Online')");
+                    header("Location: ../index.php");
+                } catch (\Throwable $th) {
+                    ?>
+                    <script>
+                        alert("Opss Usuario incorreto")
+                        location.assign("../../index.html")
+                    </script> 
+                    <?php
+                }
             }else{
                 ?> 
                 <script>alert("Opss Senha incorreta")</script>
