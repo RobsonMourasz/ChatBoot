@@ -47,21 +47,22 @@
 // Função para criar o card
 function createCard(data) {
     const card = document.createElement('div');
+    const url_foto = data.foto === null ? 'img/perfil/Foto-perfil.png' : data.foto;
     card.className = 'tela-mensagens'; // Classe do card
 
     // Cria o HTML do card dinamicamente
     card.innerHTML = `
         <div class="contato">
             <div class="contato-img">
-                <img src="img/perfil/Foto-perfil.png" alt="Imagem do perfil" width="60" height="60">
+                <img src="${url_foto}" alt="Imagem do perfil" width="60" height="60">
             </div>
             <div class="contato-descricao">
-                <small>${data.remetente}</small>
+                <small>${data.usuario}</small>
                 <p>${data.mensagem}</p>
             </div>
             <div class="contato-inf">
                 <span class="title">${new Date(data.data_envio).toLocaleTimeString()}</span>
-                <span class="visivel">${data.situacao === null ? 'Offline' : 'Online'}</span>
+                <span class="visivel">${data.situacao === null ? "Offline" : data.situacao}</span>
             </div>
         </div>
     `;
