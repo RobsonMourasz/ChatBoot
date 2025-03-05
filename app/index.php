@@ -46,60 +46,15 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
                 </div>
                 <div class="pesquisa-mensagens">
                     <div class="group-input">
-                        <form action="" method="post">
+                        <form action="" method="post" id="">
                             <input type="text" placeholder="Digite a busca...">
                         </form>
                     </div>
                 </div>
-                <div class="tela-mensagens"> <!--MENSAGEM 1 MODELO -->
-                    <div class="contato">
-                        <div class="contato-img">
-                            <img src="img/perfil/Foto-perfil.png" alt="" width="60" height="60">
-                        </div>
-                        <div class="contato-descricao">
-                            <small>Robson Moura</small>
-                            <p>Fala manolo</p>
-                        </div>
-                        <div class="contato-inf">
-                            <span class="title">12:00</span>
-                            <span class="visivel">Online</span>
-                        </div>
-                    </div>
-                </div> <!-- END MENSAGEM 1 MODELO -->
 
-                <div class="tela-mensagens"> <!--MENSAGEM 2 MODELO -->
-                    <div class="contato">
-                        <div class="contato-img">
-                            <img src="img/perfil/perfil-2.png" alt="" width="60" height="60">
-                        </div>
-                        <div class="contato-descricao">
-                            <small>Ingrid Silva</small>
-                            <p>Olá tudo bem ?</p>
-                        </div>
-                        <div class="contato-inf">
-                            <span class="title">12:00</span>
-                            <span class="visivel">Online</span>
-                        </div>
-                    </div>
-
-                </div> <!-- END MENSAGEM 2 MODELO -->
-
-                <div class="tela-mensagens"> <!--MENSAGEM 3 MODELO -->
-                    <div class="contato">
-                        <div class="contato-img">
-                            <img src="img/perfil/Perfil-3.jpg" alt="" width="60" height="60">
-                        </div>
-                        <div class="contato-descricao">
-                            <small>Rainha Elizabeth</small>
-                            <p>Meus parabéns você novo rei </p>
-                        </div>
-                        <div class="contato-inf">
-                            <span class="title">12:00</span>
-                            <span class="visivel">Online</span>
-                        </div>
-                    </div>
-
-                </div> <!-- END MENSAGEM 3 MODELO -->
+                <div class="container-mensagens" id="container-mensagens">
+                    
+                </div>
 
             </div> <!-- END TELA DE CONTATOS QUE CHEGA A MENSAGEM -->
 
@@ -179,6 +134,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="js/NovasMensagens.js"></script>
         <script>
             /* Verifificar se está na pagina  */
             const verificar = () => {
