@@ -2,13 +2,7 @@
     addEventListener('DOMContentLoaded', async () => {
         // Seleciona o contêiner onde os cards serão adicionados
         let container = document.getElementById('container-mensagens');
-        const idInput = document.getElementById('id'); // Verifica se o input de ID existe
-
-        if (!idInput) {
-            console.error('Elemento com ID "id" não encontrado!');
-            return;
-        }
-
+        const idInput = document.getElementById('id'); // Verifica se o input de 
         const userId = idInput.value;
 
         try {
@@ -19,7 +13,6 @@
                 const data = await response.json();
 
                 if (data.length > 0) {
-                    console.log("container");
                     container.innerHTML = ''; // Limpa o contêiner antes de adicionar novos cards
                     data.forEach(item => {
                         const card = createCard(item); // Cria um card para cada item

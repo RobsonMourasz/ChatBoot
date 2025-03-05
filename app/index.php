@@ -44,9 +44,9 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
                 <div class="title">
                     <h1>Conversas</h1>
                 </div>
-                <div class="pesquisa-mensagens">
+                <div class="pesquisa-mensagens" id="pesquisa">
                     <div class="group-input">
-                        <form action="" method="post" id="">
+                        <form action="" method="post">
                             <input type="text" placeholder="Digite a busca...">
                         </form>
                     </div>
