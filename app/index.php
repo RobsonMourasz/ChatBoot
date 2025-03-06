@@ -66,59 +66,8 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
                     <span id="nome">Robson Moura</span>
                     <span id="ultimo-acesso">Visto por ultimo: 25-02-2025 18:15</span>
                 </div>
-                <div class="body">
+                <div class="body" id="mensagens">
 
-                    <div class="card mensagem-recebida">
-                        <div class="card-title">
-                            <h3>Robson Moura</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Olá, gostaria de verificar a possibilidade da gente ficar rico com essa bagaça teria como me falar ?</p>
-                        </div>
-                        <div class="card-footer">
-                            <span>16:58</span>
-                        </div>
-                    </div>
-                    <div class="clear-fix"></div>
-
-                    <div class="card mensagem-enviada">
-                        <div class="card-title">
-                            <h3>Eu</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque magnam animi itaque voluptates a repellendus facilis possimus velit non. Nesciunt laboriosam facilis qui libero similique!</p>
-                        </div>
-                        <div class="card-footer">
-                            <span>16:58</span>
-                        </div>
-                    </div>
-                    <div class="clear-fix"></div>
-
-                    <div class="card mensagem-enviada">
-                        <div class="card-title">
-                            <h3>Eu</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse perspiciatis nemo ea odit quas tenetur saepe aut rem debitis pariatur atque quia, aperiam dolore eaque quidem quam cumque totam. Aperiam sed pariatur, cum voluptatibus odio, excepturi modi dolorum id quas autem culpa nostrum labore nemo commodi itaque perspiciatis, vel distinctio.</p>
-                        </div>
-                        <div class="card-footer">
-                            <span>16:59</span>
-                        </div>
-                    </div>
-                    <div class="clear-fix"></div>
-
-                    <div class="card mensagem-recebida">
-                        <div class="card-title">
-                            <h3>Robson Moura</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea eum magnam, error libero nihil et fugiat nam. Repellat vero, totam ipsam asperiores nihil accusantium provident rem ex vel eius molestiae magni consectetur neque mollitia debitis voluptatem omnis. Repudiandae veritatis autem optio recusandae incidunt numquam eaque, eum sed non harum deserunt vitae tempora dicta aperiam esse vel quia assumenda sunt, explicabo corrupti omnis. Impedit vitae facere quisquam? Voluptatibus laudantium libero dignissimos quam, at ullam eum nisi, saepe expedita fuga aut reprehenderit dicta sapiente veritatis possimus officiis excepturi! Expedita aut sit voluptatum atque rerum modi itaque nesciunt optio quam, quaerat, officiis enim!</p>
-                        </div>
-                        <div class="card-footer">
-                            <span>16:58</span>
-                        </div>
-                    </div>
-                    <div class="clear-fix"></div>
 
                 </div>
                 <div class="footer">

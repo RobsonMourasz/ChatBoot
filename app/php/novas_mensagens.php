@@ -22,11 +22,13 @@ SELECT
     a.id, 
     a.id_remetente, 
     cr.usuario AS usuario_remetente,
-    cr.ultimo_acesso AS ultimo_acesso_remetente,
     a.id_destinatario, 
-   
     cd.usuario AS usuario_destinatario,
-    cd.ultimo_acesso AS ultimo_acesso_destinatario,
+    
+    CASE
+        WHEN a.id_remetente = ? THEN cd.ultimo_acesso
+        ELSE cr.ultimo_acesso
+    END AS 'visto_ultimo',
     
     CASE
         WHEN a.id_remetente = ? THEN cd.nome
@@ -55,7 +57,7 @@ GROUP BY a.id
 ORDER BY a.data_envio DESC;";
 
     $stmt = $conexao->prepare($consulta);
-    $stmt->bind_param('iiiii', $id, $id, $id, $id, $id);
+    $stmt->bind_param('iiiiii', $id, $id, $id, $id, $id, $id);
     $stmt->execute();
     $resultado = $stmt->get_result();
     $mensagens = $resultado->fetch_all(MYSQLI_ASSOC);
