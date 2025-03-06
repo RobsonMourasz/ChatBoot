@@ -29,6 +29,11 @@ SELECT
         WHEN a.id_remetente = ? THEN cd.ultimo_acesso
         ELSE cr.ultimo_acesso
     END AS 'visto_ultimo',
+
+    CASE
+        WHEN a.id_remetente = ? THEN cd.id_login
+        ELSE cr.id_login
+    END AS 'idusuario',
     
     CASE
         WHEN a.id_remetente = ? THEN cd.nome
@@ -57,7 +62,7 @@ GROUP BY a.id
 ORDER BY a.data_envio DESC;";
 
     $stmt = $conexao->prepare($consulta);
-    $stmt->bind_param('iiiiii', $id, $id, $id, $id, $id, $id);
+    $stmt->bind_param('iiiiiii', $id, $id, $id, $id, $id, $id, $id);
     $stmt->execute();
     $resultado = $stmt->get_result();
     $mensagens = $resultado->fetch_all(MYSQLI_ASSOC);

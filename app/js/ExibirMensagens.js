@@ -2,16 +2,16 @@
 
     </div>
     <div class="clear-fix"></div> */
-async function exibir_mensagens(id) {
+async function exibir_mensagens(idLogado, idPessoa) {
 
-    const response = await fetch(`php/exibir_mensagens.php?id=${id}`); // Realiza o fetch para obter as mensagens
-    const container = document.querySelector("mensagens-exibidas").getElementById('mensagens');
+    const response = await fetch(`php/exibir_mensagens.php?idLogado=${idLogado}&idPessoa=${idPessoa}`); // Realiza o fetch para obter as mensagens
+    const container = document.getElementById('mensagens');
     if (response.ok) {
         const data = await response.json();
         if (data.length > 0) {
             container.innerHTML = ''; // Limpa o contêiner antes de adicionar novos cards
             data.forEach(item => {
-                const card = createCard(item); // Cria um card para cada item
+                const card = createCardMensagens(item); // Cria um card para cada item
                 container.appendChild(card);  // Adiciona o card ao contêiner
             });
             document.getElementById("nome").innerText = `${data.usuario}`;
@@ -23,7 +23,7 @@ async function exibir_mensagens(id) {
 }
 
 // Função para criar o card
-function createCard(data) {
+function createCardMensagens(data) {
     const card = document.createElement('div');
     card.className = 'card mensagem-recebida'; // Classe do card
 

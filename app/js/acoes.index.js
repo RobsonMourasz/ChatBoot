@@ -2,7 +2,7 @@
 (()=>{
     document.querySelectorAll(".container-mensagens").forEach(card => {
         card.addEventListener("click", ()=>{
-            exibir_mensagens(document.getElementById("id").value);
+            exibir_mensagens(document.getElementById("id").value, document.querySelector(".contato").getAttribute("idPessoa"));
             document.querySelector(".page-active").classList.toggle("opacity-100")
             setTimeout(() => {
                 document.querySelector(".page-active").classList.add("d-none");

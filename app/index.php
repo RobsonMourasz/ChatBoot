@@ -99,7 +99,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
             }
             document.addEventListener("visibilitychange", verificar)
         </script>
-        <!-- <script src="js/ExibirMensagens.js"></script> -->
+        <script src="js/ExibirMensagens.js"></script>
         <script src="js/acoes.index.js"></script>
         
     </body>

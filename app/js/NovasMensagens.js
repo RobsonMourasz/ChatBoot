@@ -45,7 +45,7 @@ function createCard(data) {
 
     // Cria o HTML do card dinamicamente
     card.innerHTML = `
-        <div class="contato">
+        <div class="contato" idPessoa="${data.idusuario}">
             <div class="contato-img">
                 <img src="${url_foto}" alt="Imagem do perfil" width="60" height="60">
             </div>
