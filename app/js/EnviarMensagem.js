@@ -9,7 +9,7 @@ document.getElementById("form-envio-mensagem").addEventListener("submit", async 
     });
 
     if (response.ok) {
-        alert("Mensagem enviada com sucesso!");
+        exibir_mensagens(document.getElementById("id").value, idDestinatarioSelecionado);
     } else {
         alert("Erro ao enviar a mensagem. Por favor, tente novamente.");
     }
