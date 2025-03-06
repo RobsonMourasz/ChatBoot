@@ -1,7 +1,8 @@
+
 (()=>{
     document.querySelectorAll(".container-mensagens").forEach(card => {
         card.addEventListener("click", ()=>{
-            console.log("clicou");
+            exibir_mensagens(document.getElementById("id").value);
             document.querySelector(".page-active").classList.toggle("opacity-100")
             setTimeout(() => {
                 document.querySelector(".page-active").classList.add("d-none");

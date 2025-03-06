@@ -5,7 +5,7 @@
 async function exibir_mensagens(id) {
 
     const response = await fetch(`php/exibir_mensagens.php?id=${id}`); // Realiza o fetch para obter as mensagens
-    const container = document.getElementById('mensagens');
+    const container = document.querySelector("mensagens-exibidas").getElementById('mensagens');
     if (response.ok) {
         const data = await response.json();
         if (data.length > 0) {
@@ -41,7 +41,7 @@ function createCard(data) {
     `;
     const card_flix = document.createElement('div');
     card_flix.innerHTML = "";
-    card_flix.innerHTML = `<div class="clear-fix"></div>`;
+    card_flix.className = "clear-fix";
     card.appendChild(card_flix);
     return card;
 }
