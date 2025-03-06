@@ -38,6 +38,7 @@
     });
 })();
 
+
 // Função para criar o card
 function createCard(data) {
     const card = document.createElement('div');

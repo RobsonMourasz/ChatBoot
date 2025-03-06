@@ -72,9 +72,10 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
                 </div>
                 <div class="footer">
                     <div class="group-input">
-                        <form action="" method="post">
+                        <form id="form-envio-mensagem">
                             <div class="container-input">
-                                <input type="text" placeholder="Digite a mensagem...">
+                                <input type="text" placeholder="Digite a mensagem..." name="mensagem">
+                                <input type="submit" value="" class="btn-envio">
                             </div>
                         </form>
                     </div>
@@ -101,6 +102,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
         </script>
         <script src="js/ExibirMensagens.js"></script>
         <script src="js/acoes.index.js"></script>
+        <script src="js/EnviarMensagem.js"></script>
         
     </body>
 

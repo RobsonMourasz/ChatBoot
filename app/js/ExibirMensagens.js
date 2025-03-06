@@ -2,6 +2,8 @@
 
     </div>
     <div class="clear-fix"></div> */
+let idDestinatarioSelecionado = null
+
 async function exibir_mensagens(idLogado, idPessoa) {
 
     const response = await fetch(`php/exibir_mensagens.php?idLogado=${idLogado}&idPessoa=${idPessoa}`); // Realiza o fetch para obter as mensagens

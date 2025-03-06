@@ -13,6 +13,7 @@
         if (contatoDiv && contatoDiv.hasAttribute('idPessoa')) {
             // Obtém o valor do atributo idPessoa
             const idPessoa = contatoDiv.getAttribute('idPessoa');
+            idDestinatarioSelecionado = idPessoa;
             exibir_mensagens(document.getElementById("id").value, idPessoa);
             document.querySelector(".page-active").classList.toggle("opacity-100");
             setTimeout(() => {
@@ -30,6 +31,7 @@
         }
     });
 })();
+
 async function CarregarConversasUsuarios() {
     const idLogado = document.getElementById("id");
     const pesq_conversas = await fetch(`../php/pesqConversas.php?id=${idLogado}`);
@@ -40,3 +42,4 @@ async function CarregarConversasUsuarios() {
         }
     }
 }
+

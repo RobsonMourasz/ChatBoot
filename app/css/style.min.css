@@ -310,4 +310,16 @@
     height: 100%;
 }
 
+.btn-envio{
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    z-index: 10000;
+}
 
