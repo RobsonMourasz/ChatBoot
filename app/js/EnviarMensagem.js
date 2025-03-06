@@ -9,6 +9,7 @@ document.getElementById("form-envio-mensagem").addEventListener("submit", async 
     });
 
     if (response.ok) {
+        limparInputs("form-envio-mensagem");
         exibir_mensagens(document.getElementById("id").value, idDestinatarioSelecionado);
     } else {
         alert("Erro ao enviar a mensagem. Por favor, tente novamente.");

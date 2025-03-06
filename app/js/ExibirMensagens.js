@@ -25,6 +25,7 @@ async function exibir_mensagens(idLogado, idPessoa) {
             container.innerHTML = '<p>Sem novas mensagens</p>'; // Exibe mensagem padrão
         }
     }
+    
 }
 
 // Função para criar o card

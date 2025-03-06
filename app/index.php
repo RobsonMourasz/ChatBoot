@@ -74,7 +74,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
                     <div class="group-input">
                         <form id="form-envio-mensagem">
                             <div class="container-input">
-                                <input type="text" placeholder="Digite a mensagem..." name="mensagem">
+                                <input type="text" placeholder="Digite a mensagem..." name="mensagem" autocomplete="off">
                                 <input type="submit" value="" class="btn-envio">
                             </div>
                         </form>
@@ -84,6 +84,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="js/Funcoes.Feitas.js"></script>
         <script src="js/NovasMensagens.js"></script>
         <script>
             /* Verifificar se está na pagina  */
