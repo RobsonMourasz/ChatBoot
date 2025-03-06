@@ -18,6 +18,7 @@
                         const card = createCard(item); // Cria um card para cada item
                         container.appendChild(card);  // Adiciona o card ao contêiner
                     });
+
                 } else {
                     container.innerHTML = '<p>Sem novas mensagens</p>'; // Exibe mensagem padrão
                 }

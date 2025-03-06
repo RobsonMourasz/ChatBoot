@@ -14,8 +14,11 @@ async function exibir_mensagens(idLogado, idPessoa) {
                 const card = createCardMensagens(item); // Cria um card para cada item
                 container.appendChild(card);  // Adiciona o card ao contêiner
             });
-            document.getElementById("nome").innerText = `${data.usuario}`;
-            document.getElementById("ultimo-acesso").innerText = `${data.visto_ultimo}`;
+            document.getElementById("nome").innerText = data[0].usuario;
+            document.getElementById("ultimo-acesso").innerText = `Visto por último em ${data[0].ultimo_acesso}`;
+            document.querySelectorAll(".card").forEach(card => {
+                card.scrollIntoView();
+            });
         } else {
             container.innerHTML = '<p>Sem novas mensagens</p>'; // Exibe mensagem padrão
         }
@@ -25,12 +28,19 @@ async function exibir_mensagens(idLogado, idPessoa) {
 // Função para criar o card
 function createCardMensagens(data) {
     const card = document.createElement('div');
-    card.className = 'card mensagem-recebida'; // Classe do card
-
+    let user = "";
+    if (data.id_remetente == document.getElementById("id").value) {
+        card.className = 'card mensagem-enviada';
+        user = "Eu";
+        
+    }else{
+        card.className += 'card mensagem-recebida';
+        user = data.usuario;
+    }
     // Cria o HTML do card dinamicamente
     card.innerHTML = `
         <div class="card-title">
-            <h3>${data.usuario}</h3>
+            <h3>${user}</h3>
         </div>
         <div class="card-body">
             <p>${data.mensagem}</p>
