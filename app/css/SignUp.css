@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header{
+    text-align: center;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+}
+
+.group > label{
+    padding-right: 1em;
+}
+
+.group > input{
+    width: 50%;
+    padding: .5em;
+}
+
+input[type="submit"]{
+    width: 50%;
+    padding: 1em;
+    margin: 1em;
+    background-color: #1682c0;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
