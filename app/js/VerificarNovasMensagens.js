@@ -14,7 +14,10 @@ async function buscarNovasMensagens() {
                         // Obtém o valor do atributo idPessoa
                         const idPessoa = contatoDiv.getAttribute('idPessoa');
                         if (idPessoa == data.pessoa){
-                            contatoDiv.querySelector('.contato-descricao').style = "background-color: #f00;";
+                            const descricaoDiv = contatoDiv.querySelector('.contato-descricao');
+                            if (descricaoDiv) {
+                                descricaoDiv.style.backgroundColor = "#f00"; // Define a cor de fundo
+                            }
                         }
             
                     } else {
