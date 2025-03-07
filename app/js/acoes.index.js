@@ -1,7 +1,5 @@
 
 (() => {
-
-
     // Seleciona o contêiner geral
     const container = document.getElementById('container-mensagens');
 
@@ -19,6 +17,7 @@
             setTimeout(() => {
                 document.querySelector(".page-active").classList.add("d-none");
             }, 500);
+
         } else {
             console.log('Clique fora da div com a classe "contato" ou sem atributo idPessoa');
         }
@@ -32,14 +31,7 @@
     });
 })();
 
-async function CarregarConversasUsuarios() {
-    const idLogado = document.getElementById("id");
-    const pesq_conversas = await fetch(`../php/pesqConversas.php?id=${idLogado}`);
-    if (pesq_conversas.ok) {
-        const retorno_conversa = await pesq_conversas.json();
-        if (retorno_conversa.Retorno === "OK") {
-
-        }
-    }
+async function MensagemVisualizada(idLogado, idDestinatario) {
+    const mensagemVisualizada = await fetch(`php/visualizar_mensagem.php?idLogado=${idLogado}&idDestinatario=${idDestinatario}`);
 }
 

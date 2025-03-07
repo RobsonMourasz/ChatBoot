@@ -36,7 +36,7 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
                     <a href="#" class="icon-link"><i class="bi bi-person-circle"></i></a>
                 </div>
                 <div class="icons-mensagens">
-                    <a href="php/logoff.php" class="icon-link"><i class="bi bi-box-arrow-right"></i></a>
+                    <a href="php/logoff.php?id=<?php echo $idLogado ?>" class="icon-link"><i class="bi bi-box-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -90,21 +90,23 @@ if (isset($_SESSION['sessao']) && !empty($_SESSION['sessao'])) {
             /* Verifificar se está na pagina  */
             const verificar = () => {
                 if (document.visibilityState === "visible") {
-                    <?php 
-                        $conexao->query("INSERT INTO usuarios_ativos (id_usuario, ultimo_acesso, situacao) VALUES ($idLogado, now(), 'Online')");
-                    ?>
+                   Atualizar(document.getElementById("id").value)
                 } else {
-                    <?php 
-                        $conexao->query("INSERT INTO usuarios_ativos (id_usuario, ultimo_acesso, situacao) VALUES ($idLogado, now(), 'Offline')");
-                    ?>
+                    Atualizar(document.getElementById("id").value)
                 }
             }
+            
+            
+            async function Atualizar(idUsuario) {
+                const response = await fetch(`php/atualizar_status.php?id=${idUsuario}`);
+            };
+
             document.addEventListener("visibilitychange", verificar)
         </script>
         <script src="js/ExibirMensagens.js"></script>
         <script src="js/acoes.index.js"></script>
         <script src="js/EnviarMensagem.js"></script>
-        
+        <script src="js/VerificarNovasMensagens.js"></script>
     </body>
 
     </html>

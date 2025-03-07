@@ -1,7 +1,3 @@
-/* <div class="card mensagem-recebida">
-
-    </div>
-    <div class="clear-fix"></div> */
 let idDestinatarioSelecionado = null
 
 async function exibir_mensagens(idLogado, idPessoa) {
@@ -25,6 +21,10 @@ async function exibir_mensagens(idLogado, idPessoa) {
             container.innerHTML = '<p>Sem novas mensagens</p>'; // Exibe mensagem padrão
         }
     }
+
+    setTimeout(() => {
+        MensagemVisualizada(document.getElementById("id").value, idDestinatarioSelecionado);
+    }, 500);
     
 }
 

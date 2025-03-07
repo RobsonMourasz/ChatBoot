@@ -66,3 +66,13 @@ input[type="submit"]{
     border-radius: 10px;
     cursor: pointer;
 }
+
+p{
+    display: inline-block;
+    text-align: center;
+}
+
+p > a{
+    color: #1682c0;
+    text-decoration: none;
+}

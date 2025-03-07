@@ -55,8 +55,12 @@ SELECT
 FROM UltimasMensagens a
 LEFT JOIN cad_login cr ON a.id_remetente = cr.id_login
 LEFT JOIN cad_login cd ON a.id_destinatario = cd.id_login
-LEFT JOIN usuarios_ativos ur ON a.id_remetente = ur.id_usuario
-LEFT JOIN usuarios_ativos ud ON a.id_destinatario = ud.id_usuario
+    LEFT JOIN usuarios_ativos ur ON a.id_remetente = ur.id_usuario AND ur.id = (
+        SELECT MAX(id) FROM usuarios_ativos WHERE id_usuario = a.id_remetente
+    )
+    LEFT JOIN usuarios_ativos ud ON a.id_destinatario = ud.id_usuario AND ud.id = (
+        SELECT MAX(id) FROM usuarios_ativos WHERE id_usuario = a.id_destinatario
+    )
 WHERE a.rn = 1 
 GROUP BY a.id
 ORDER BY a.data_envio DESC;";

@@ -31,6 +31,8 @@
                     <input type="submit" value="Cadastrar">
                 </div>
             </form>
+            
+            <p>já possui uma conta ? <a href="../../index.html"> Faça login</a></p>
         </div>
     </div>
 </body>
